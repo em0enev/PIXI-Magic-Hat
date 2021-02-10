@@ -11,6 +11,7 @@ export default class MagicHat extends Container {
         this.buttonMode = true;
     }
 
+
     _createHatSprite() {
         const hat = new Sprite.from('hat')
         hat.anchor.set(0.5)
@@ -25,9 +26,10 @@ export default class MagicHat extends Container {
 
         txt.style = new TextStyle({
             fontSize: 200,
-            align: 'center'
+            align: 'center',
+            
         })
-
+        
         this.addChild(txt)
 
         return txt;
@@ -35,8 +37,15 @@ export default class MagicHat extends Container {
     }
 
     throwRandomEmoji() {
+        const mask = new Sprite.from('mask');
+        mask.anchor.set(0.5)
+    
+        this._item.mask = mask;
         this._item.text = this._getRandomEmoji()
         gsap.fromTo(this._item, {y:0}, {y: -300, duration: 1, ease:'elastic'})
+        console.log(this._item.mask)
+        this._item.mask = null;
+
     }
 
     get emojis() {

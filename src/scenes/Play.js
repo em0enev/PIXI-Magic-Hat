@@ -14,9 +14,10 @@ export default class Play extends Scene {
 
     const hat = new MagicHat();
     hat.y = 150
+   
     this.addChild(hat);
 
-    hat.on('click', () => hat.throwRandomEmoji())
+    hat.on('click',async () =>await hat.throwRandomEmoji())
   }
 
   /**

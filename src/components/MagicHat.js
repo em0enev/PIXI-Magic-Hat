@@ -13,7 +13,6 @@ export default class MagicHat extends Container {
         this.data = {
             emojiArr: ['💇🏼', '💇🏾', '🦀', '👿', '👱', '💇‍♂️', '👹']
         }
-        this.throwRandomEmoji();
     }
     
     async throwRandomEmoji() {

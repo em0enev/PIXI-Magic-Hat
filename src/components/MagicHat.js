@@ -13,6 +13,7 @@ export default class MagicHat extends Container {
         this.data = {
             emojiArr: ['💇🏼', '💇🏾', '🦀', '👿', '👱', '💇‍♂️', '👹']
         }
+        this.throwRandomEmoji();
     }
     
     async throwRandomEmoji() {
@@ -38,7 +39,6 @@ export default class MagicHat extends Container {
     _createItemText() {
         const txt = new Text("")
         txt.anchor.set(0.5)
-
         txt.style = new TextStyle({
             fontSize: 200,
             align: 'center',
@@ -58,7 +58,7 @@ export default class MagicHat extends Container {
         mask.y = -350
         this.addChild(mask)
         this._item.mask = mask
-        this._item.mask.height = 500
+        this._item.mask.height = 500;
     }
 
     /**

@@ -17,7 +17,7 @@ export default class Play extends Scene {
    
     this.addChild(hat);
 
-    hat.on('click',async () =>await hat.throwRandomEmoji())
+    hat._body.on('click' ,async () => await hat.throwRandomEmoji())
   }
 
   /**

@@ -7,8 +7,6 @@ export default class MagicHat extends Container {
         this.name = 'magic-hat'
         this._body = this._createHatSprite();
         this._item = this._createItemText();
-        this.interactive = true;
-        this.buttonMode = true;
         this._setMaskToItem()
         this.data = {
             emojiArr: ['💇🏼', '💇🏾', '🦀', '👿', '👱', '💇‍♂️', '👹']
@@ -27,6 +25,8 @@ export default class MagicHat extends Container {
     _createHatSprite() {
         const hat = new Sprite.from('hat')
         hat.anchor.set(0.5)
+        hat.interactive = true;
+        hat.buttonMode = true;
         this.addChild(hat)
 
         return hat;
